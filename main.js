@@ -25,8 +25,6 @@ function updateDateTime() {
   fetchAndDisplayDayOfWeek();
 }
 
-// Call the updateDateTime function initially to set the time and day of the week
 updateDateTime();
 
-// Update the time and day of the week every second (1000 milliseconds)
 setInterval(updateDateTime, 1000);
