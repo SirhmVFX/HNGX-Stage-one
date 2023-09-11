@@ -1,14 +1,11 @@
-function displayUtcTime() {
-  const curentUtcTime = new Date().getTime();
-  return curentUtcTime;
+function fetchAndDisplayUTCTime() {
+  const timeElement = document.querySelector(".time");
+  const utcTime = new Date().toUTCString();
+  timeElement.textContent = `UTC Time: ${utcTime}`;
 }
 
-const currentTimeElement = document.getElementById("current-time");
-
-const currentUTCTimeMillis = displayUtcTime();
-currentTimeElement.textContent = `Current UTC Time in Milliseconds: ${currentUTCTimeMillis}`;
-
-function getCurrentDayOfWeek() {
+function fetchAndDisplayDayOfWeek() {
+  const dayOfWeekElement = document.querySelector(".dayOfTheWeek");
   const daysOfWeek = [
     "Sunday",
     "Monday",
@@ -18,10 +15,18 @@ function getCurrentDayOfWeek() {
     "Friday",
     "Saturday",
   ];
-  const currentDayIndex = new Date().getDay();
-  return daysOfWeek[currentDayIndex];
+  const currentDayOfWeek = new Date().getDay();
+  const dayName = daysOfWeek[currentDayOfWeek];
+  dayOfWeekElement.textContent = `Day of the Week: ${dayName}`;
 }
 
-const currentDayElement = document.getElementById("current-day");
-const currentDay = getCurrentDayOfWeek();
-currentDayElement.textContent = `Current Day of the Week: ${currentDay}`;
+function updateDateTime() {
+  fetchAndDisplayUTCTime();
+  fetchAndDisplayDayOfWeek();
+}
+
+// Call the updateDateTime function initially to set the time and day of the week
+updateDateTime();
+
+// Update the time and day of the week every second (1000 milliseconds)
+setInterval(updateDateTime, 1000);

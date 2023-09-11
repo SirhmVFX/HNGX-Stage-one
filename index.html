@@ -1,45 +1,41 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ganiu Samuel - HNGX Stage One</title>
+    <title>HNGX Stage One - Ganiu Samuel</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <div class="side-1">
-        <h1 class="slackname" data-testid="slackUserName">Ganiu Samuel</h1>
-        <div class="sub-sect">
-          <h4
-            class="dayOfTheWeek"
-            data-testid="currentDayOfTheWeek"
-            id="current-day"
-          ></h4>
-          <h4 class="time" data-testid="currentUTCTime" id="current-time"></h4>
-        </div>
-        <div class="sub-sect">
-          <h4 class="track" data-testid="myTrack">Frontend</h4>
-          <h4>
-            <a
-              href="https://github.com/SirhmVFX/HNGX-Stage-one"
-              data-testid="githubURL"
-              =""
-              >HNGX - STAGE ONE PROJECT REPO</a
-            >
-          </h4>
-        </div>
-      </div>
-      <div class="side-2">
+    <div class="generalContainer">
+      <div class="sectionOne">
+        <h1 class="slackName" data-testid="slackUserName">Ganiu Samuel</h1>
         <img
-          class="slackImage"
-          src="/images/slackProfilePicture.png"
-          alt="slackImage"
+          src="./images/slackProfilePicture.png"
+          class="profileImage"
           data-testid="slackDisplayImage"
+          alt="Ganiu Samuel"
         />
-        <div class="box"></div>
       </div>
-    </main>
-    <script src="./main.js"></script>
+      <div class="sectionTwo">
+        <h2
+          class="dayOfTheWeek"
+          data-testid="currentDayOfTheWeek"
+          id="dayOfTheWeek"
+        ></h2>
+        <h2 class="time" data-testid="currentUTCTime" id="time"></h2>
+      </div>
+      <div class="sectionThree">
+        <h2 class="track" data-testid="myTrack">Frontend</h2>
+        <h2>
+          <a
+            href="https://github.com/SirhmVFX/HNGX-Stage-one"
+            data-testid="githubURL"
+            target="_blank"
+            >GitHub Repo For Project</a
+          >
+        </h2>
+      </div>
+    </div>
   </body>
+  <script src="./main.js" type="module"></script>
 </html>
