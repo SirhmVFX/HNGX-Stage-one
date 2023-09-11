@@ -1,6 +1,6 @@
 function fetchAndDisplayUTCTime() {
   const timeElement = document.querySelector(".time");
-  const utcTime = new Date().toUTCString();
+  const utcTime = new Date().getTime();
   timeElement.innerHTML = `UTC Time: ${utcTime}`;
 }
 
